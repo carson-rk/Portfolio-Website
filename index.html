@@ -3,54 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/output.css">
     <title>Carson | Design. Code. Automate.</title>
 </head>
-<body>
-    <div>
-        <div class="nav-bar">
-            <ul>
-                <li>MENU</li>
-                <li>ABOUT ME</li>
-                <li>SERVICES</li>
-            </ul>
+<body class="gradient-bg text-baby-blue">
+    <div class="mx-auto p-2">
+        <div class="flex justify-between items-center px-4 py-2 sm:block">
+            <logo class="font-display font-bold text-4xl sm:text-5xl tracking-wider sm:flex sm:justify-center sm:p-4">C.K.</logo>
+            <button id="menu-btn" aria-label="Menu" class="sm:hidden grid grid-cols-2 gap-1 p-1 border rounded-md place-items-center">
+                <span class="w-3 h-3 bg-transparent border rounded-full"></span>
+                <span class="w-3 h-3 bg-transparent rounded-full border"></span>
+                <span class="w-3 h-3 bg-transparent rounded-full border"></span>
+                <span class="w-3 h-3 bg-transparent border rounded-full"></span>
+            </button>
         </div>
-        <logo>C.K.</logo>
-        <div>
-            <p>Hello👋🏾, I am Carson, a Full Stack Developer & Automation Enthusiast.</p>
-            <h1>TURNING COMPLEX IDEAS INTO ELEGANT CODE</h1>
+        <div class="hidden sm:block">             
+            <div class="nav-bar absolute top-[65%] left-8 md:left-12 lg:left-20 -translate-y-1/2 flex justify-center items-center z-50">                 
+                <ul class="flex font-medium gap-10 list-none [writing-mode:vertical-rl] -rotate-180">
+                    <li>
+                        <a href="about.html">ABOUT ME</a>
+                    </li>
+                    <li>
+                        <a href="health-portfolio.html">HEALTH</a>
+                    </li>
+                    <li>
+                        <a href="artists-portfolio.html">ARTISTS</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <img src="assets/images/common/landing-page.png" alt="a flat, modern illustration of two people working; a man sitting with a laptop and a woman standing with a tablet, surrounded by abstract shapes and icons.">
+        <div id="mobile-menu" class="fixed inset-0 gradient-bg bg-opacity-50 z-50 hidden sm:hidden">
+            <div class="absolute top-0 right-0 w-64 h-full shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out background-blur">
+                <div class="p-6">
+                    <button id="close-menu" class="absolute top-4 right-4 text-2xl">&times;</button>
+                    <ul class="mt-12 space-y-6">
+                        <li><a href="index.html" class="block text-lg font-medium">HOME</a></li>
+                        <li><a href="about.html" class="block text-lg font-medium">ABOUT ME</a></li>
+                        <li><a href="health-portfolio.html" class="block text-lg font-medium">HEALTH</a></li>
+                        <li><a href="artists-portfolio.html" class="block text-lg font-medium">ARTISTS</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="lg:flex lg:justify-center">
+            <div class="flex flex-col items-start pl-4 sm:pl-10 lg:max-w-[900px] md:max-w-[800px] sm:max-w-[550px] ">
+                <p class="text-sm sm:text-base">Hello👋🏾, I am Carson, a Full Stack Developer & Automation Enthusiast.</p>
+                <h1 class="text-3xl sm:text-4xl font-semibold leading-tight">TURNING COMPLEX IDEAS INTO ELEGANT CODE</h1>
+            </div>
+        </div>
+        <div class="flex justify-center sm:block sm:opacity-60">
+            <img class="w-full sm:w-[60%] sm:ml-[40px] md:ml-[70px] lg:ml-[150px] max-w-[400px] md:max-w-[500px] h-auto" src="assets/images/common/landing-page.png" alt="a flat, modern illustration of two people working; a man sitting with a laptop and a woman standing with a tablet, surrounded by abstract shapes and icons.">
+        </div>
+        <div class="sm:absolute sm:bottom-8 md:bottom-0 sm:right-4 md:right-10 lg:right-40 sm:text-center flex flex-col items-center sm:mt-0 sm:p-4 md:p-6 sm:max-w-xs md:max-w-sm mx-auto">
+            <p class="px-12 sm:px-0">I design and build fast, user-friendly, and seamless web applications.</p>
+            <div class="socials">
+                <ul class="flex flex-wrap gap-1 text-xs  mt-2 tracking-wide">
+                    <li>
+                        <a href="https://www.linkedin.com/in/carson-r-k" target="_blank" rel="noopener">/ LINKEDIN</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/carson-rk" target="_blank" rel="noopener">/ GITHUB</a>
+                    </li>
+                    <li>
+                        <a href="https://bit.ly/carson_r_k_" target="_blank" rel="noopener">/ X</a>
+                    </li>
+                    <li>
+                        <a href="https://bit.ly/carson_r_k" target="_blank" rel="noopener">/ REDDIT</a>
+                    </li>
+                    <li>
+                        <a href="https://dribbble.com/carson-r-k" target="_blank" rel="noopener">/ DRIBBLE /</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="buttons font-bold">
+                <a href="about.html#services" class="pri-button">MY SERVICES</a>
+                <a class="sec-button">CONTACT ME</a>
+            </div>
+        </div>
         <div>
-            <p>I design and build fast, user-friendly, and seamless web applications.</p>
-            <ul>
-                <li>LINKEDIN</li>
-                <li>GITHUB</li>
-                <li>X</li>
-                <li>REDDIT</li>
-                <li>DRIBBLE</li>
-            </ul>
-            <button>VIEW PROJECTS</button>
-            <button>CONTACT ME</button>
+            <h2 class="p-4 sm:p-8 m-4 text-center font-medium text-2xl sm:text-3xl">BRING YOUR IDEAS TO LIFE</h2>
+            <div class="flex justify-center gap-4 md:gap-8 p-4 md:px-8 mb-4">
+                <div class="card">
+                    <img class="img-card" src="assets/images/common/about-me-menu.png" alt="a flat, modern illustration of a person pointing at huge projection of his profile">
+                    <div class="text-card font-semibold text-xl sm:text-2xl">
+                        <h3><a href="about.html" class="card-link">About Me</a></h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img-card" src="assets/images/common/health-menu.png" alt="a flat, modern illustration of a group of three people in a lab coats working in a lab."> 
+                    <div class="text-card font-semibold text-xl sm:text-2xl">
+                        <h3><a href="health-portfolio.html" class="card-link">Health Projects</a></h3>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img-card" src="assets/images/common/artist-menu.png" alt="a flat, modern illustration of a person painting on a huge canvas with a brush.">
+                    <div class="text-card font-semibold text-xl sm:text-2xl">
+                        <h3><a href="artists-portfolio.html" class="card-link">Artists Projects</a></h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div>
-        <h2>BRING YOUR IDEAS TO LIFE</h2>
-        <div class="cards">
-            <div>
-                <img src="assets/images/common/about-me-menu.png" alt="a flat, modern illustration of a person pointing at huge projection of his profile">
-                <h3>About Me</h3>
-            </div>
-            <div>
-                <img src="assets/images/common/health-menu.png" alt="a flat, modern illustration of a group of three people in a lab coats working in a lab."> <h3> Health</h3>
-            </div>
-            <div>
-                <img src="assets/images/common/artist-menu.png" alt="a flat, modern illustration of a person painting on a huge canvas with a brush."> <h3>Artists</h3>
-            </div>
-        </div>
-    </div>
-    <footer>
-        <p>© 2025 Carson K. All rights reserved.</p>
-        <p>Illustrations by <a href="https://storyset.com/" target="_blank" rel="noopener">Storyset</a></p>
+    <footer class="flex sm:justify-center justify-between gap-16 p-4 sm:p-8 text-xs sm:text-base">
+        <p>© 2025 <a href="https://linktr.ee/carson_r.k" target="_blank" rel="noopener" class="text-baby-blue hover:text-mid-red">Carson K</a>. All rights reserved.</p>
+        <p>Illustrations by <a href="https://storyset.com/" target="_blank" rel="noopener" class="text-baby-blue hover:text-mid-red">Storyset</a></p>
     </footer>
+    <script src="js/main.js"></script>
 </body>
 </html>

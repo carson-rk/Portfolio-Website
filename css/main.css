@@ -1,0 +1,151 @@
+@import "tailwindcss";
+
+@theme {
+    /* color palette, spacing scale, typography scale, or breakpoints */
+    --color-*: initial;
+    --color-dark-blue:oklch(0.2136 0.0483 257.95);
+    --color-mid-green:oklch(0.9077 0.1414 174.34);
+    --color-dark-green:oklch(0.3264 0.0399 210.9);
+    --color-bright-green:oklch(0.4579 0.0632 175.95);
+    --color-baby-blue:oklch(0.9499 0.028 182.89);
+    --color-mid-red:oklch(0.7258 0.1699 20.96);
+
+    --font-display: 'Kanit', sans-serif;
+    --font-body: 'Nunito Sans', sans-serif;
+    
+
+
+
+}
+
+@layer base {
+    
+    /* base styles for specific HTML elements */
+
+    h1, h2, h3, h4, h5, h6, logo {
+        font-family: var(--font-display);
+    
+    }
+
+
+    p, li, a, button {
+        font-family: var(--font-body);
+        
+    }
+
+    .nav-bar a {
+        @apply inline-block no-underline cursor-pointer transition-all duration-300 ease-in-out;
+        color: var(--color-baby-blue);
+      }
+      
+      .nav-bar a:hover {
+        color: var(--color-mid-red);
+        @apply scale-110;
+      }
+
+      .socials {
+        @apply flex list-none;
+      }
+      
+      .socials li {
+        @apply inline-block;
+      }
+      
+      .socials a {
+        @apply no-underline;
+        color: var(--color-baby-blue);
+      }
+      
+      .socials a:hover {
+        color: var(--color-mid-red);
+      }
+
+ }
+    
+
+@layer components {
+    /* reusable components like buttons, cards, or modals */
+
+    .buttons {
+      @apply flex gap-5 mt-[15px];
+    }
+
+    .pri-button {
+      @apply p-2 rounded-lg text-base text-dark-blue cursor-pointer no-underline text-center transition-all duration-300 ease-in-out hover:scale-105 bg-mid-red hover:bg-mid-red/80;
+    }
+    
+    .sec-button {
+      @apply p-2 rounded-lg text-base text-dark-blue cursor-pointer no-underline text-center transition-all duration-300 ease-in-out hover:scale-105 bg-mid-green hover:bg-mid-green/80;
+    }
+
+    .card {
+      @apply max-w-72 bg-radial-[at_50%_75%] from-bright-green via-dark-green to-dark-blue to-90% p-4 rounded-xl shadow-md shadow-baby-blue/50;
+    }
+    
+    .img-card {
+      @apply border-2 rounded-xl mb-3 p-2;
+    }
+    
+    .text-card {
+      @apply border-2 rounded-xl p-0.5 text-center;
+    }
+    
+    .card-title {
+      @apply block;
+    }
+    
+    .card-link {
+      @apply no-underline;
+    }
+
+    .linear-text {
+      @apply relative ml-[20px] border border-baby-blue bg-gradient-to-r from-dark-blue via-dark-green to-bright-green px-2 py-1 text-baby-blue;
+    }
+    
+    .linear-text::before {
+      @apply content-[''] absolute left-[-25px] top-1/2 -translate-y-1/2 w-[16px] h-[16px] rounded-full border border-b-baby-blue bg-dark-blue;
+    }
+    
+    .linear-text::after {
+      @apply content-[''] absolute left-[-21px] top-1/2 -translate-y-1/2 w-[8px] h-[8px] rounded-full bg-baby-blue;
+    }
+
+    .gradient-bg {
+      @apply bg-radial-[at_50%_75%] from-bright-green via-dark-green to-dark-blue to-90%;
+    }
+
+    .bar {
+      @apply w-full max-w-sm;
+    }
+  
+    .label {
+      @apply flex justify-between text-baby-blue;
+    }
+  
+    .track {
+      @apply w-full bg-dark-blue rounded-full h-3 border;
+    }
+  
+    .fill {
+      @apply h-2.5 rounded-l-full;
+    }
+
+    .track-card{
+      @apply border rounded-xl bg-dark-blue p-2 shadow-md shadow-baby-blue/50;
+    }
+
+    .two-cards {
+      @apply grid grid-cols-2 items-end;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .animate-scroll {
+      animation: scroll-left 20s linear infinite;
+      display:flex;
+      width: max-content;
+    }
+}
